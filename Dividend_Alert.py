@@ -22,6 +22,7 @@ auth_token = 'cb6e661b326e7e9dc7a12e3381d88489'
 client = Client(acc_sid,auth_token)
 data = requests.get('https://www.moneycontrol.com/stocks/marketinfo/dividends_declared/index.php')
 
+phone_num = ''#Enter your number 
 
 soup = BeautifulSoup(data.text, 'html.parser')
 
@@ -62,4 +63,4 @@ for y in lis:
 message = client.messages.create(
     body=ans,
     from_='+12015145230',
-    to='+917702999976')
+    to=phone_num)
